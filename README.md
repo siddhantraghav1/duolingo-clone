@@ -320,21 +320,7 @@ All numbers live at the top of `backend/app/game_logic.py`.
 
 ---
 
-## Deployment
 
-### Backend on Render
-
-1. Push the repository to GitHub.
-2. On render.com: **New → Blueprint** → select the repository (uses `render.yaml`), or create a Web
-   Service with root directory `backend`, build `pip install -r requirements.txt`, start
-   `uvicorn app.main:app --host 0.0.0.0 --port $PORT`.
-3. Set `CORS_ORIGINS` to your Vercel URL.
-
-### Frontend on Vercel
-
-1. **Add New → Project** → import the repository, set **Root Directory** to `frontend`.
-2. Add the environment variable `BACKEND_URL` = your Render URL (e.g. `https://duolingo-clone-api.onrender.com`), not the Vercel frontend URL. This is required for production builds.
-3. Deploy. Requests to `/api/*` are forwarded to the backend.
 
 ### Environment variables
 
