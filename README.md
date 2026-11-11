@@ -7,7 +7,7 @@ and achievements**. One Spanish course is seeded so the app is usable immediatel
 > Built as an SDE full-stack assignment. Educational project, not affiliated with Duolingo.
 > The mascot ("Pip"), sounds and icons are original; no Duolingo assets are used.
 
-- **Live demo:** _add your Vercel URL here_
+- **Live demo:** https://duolingo-clone-ten-blue.vercel.app/
 
 ---
 
