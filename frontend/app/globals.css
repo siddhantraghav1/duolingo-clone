@@ -1,0 +1,128 @@
+@import "tailwindcss";
+
+/* `dark:` classes apply when <html class="dark"> (toggled in Settings). */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* ------------------------------------------------------------------ theme colours
+   Colours that change between light and dark mode are CSS variables.
+   Components use them through Tailwind names like  bg-surface  text-muted  border-line
+*/
+:root {
+  --bg: #ffffff;
+  --surface: #ffffff;
+  --surface-2: #f7f7f7; /* hover / subtle panels */
+  --line: #e5e5e5; /* borders */
+  --ink: #4b4b4b; /* main text */
+  --muted: #777777; /* secondary text */
+  --faint: #afafaf; /* disabled / locked */
+
+  --green-soft: #d7ffb8; /* "correct" feedback bar */
+  --red-soft: #ffdfe0; /* "wrong" feedback bar */
+  --blue-soft: #ddf4ff; /* selected option / active nav item */
+  --blue-soft-line: #84d8ff;
+}
+
+.dark {
+  --bg: #131f24;
+  --surface: #131f24;
+  --surface-2: #202f36;
+  --line: #37464f;
+  --ink: #f1f7fb;
+  --muted: #a3b4bb;
+  --faint: #52656d;
+
+  --green-soft: #202f36;
+  --red-soft: #202f36;
+  --blue-soft: #202f36;
+  --blue-soft-line: #3f85a7;
+}
+
+@theme inline {
+  --font-sans: var(--font-nunito), ui-rounded, system-ui, sans-serif;
+
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-line: var(--line);
+  --color-ink: var(--ink);
+  --color-muted: var(--muted);
+  --color-faint: var(--faint);
+  --color-green-light: var(--green-soft);
+  --color-red-light: var(--red-soft);
+  --color-blue-light: var(--blue-soft);
+  --color-blue-line: var(--blue-soft-line);
+}
+
+/* Brand colours: the same in light and dark mode.
+   Each has a darker "-dark" shade used for the 3D bottom edge of buttons. */
+@theme {
+  --color-green: #58cc02;
+  --color-green-dark: #58a700;
+  --color-blue: #1cb0f6;
+  --color-blue-dark: #1899d6;
+  --color-red: #ff4b4b;
+  --color-red-dark: #ea2b2b;
+  --color-gold: #ffc800;
+  --color-gold-dark: #e5b400;
+  --color-orange: #ff9600;
+  --color-orange-dark: #e08600;
+  --color-purple: #ce82ff;
+  --color-purple-dark: #a568cc;
+
+  /* ---------------------------------------------------------------- animations
+     usage: className="animate-pop"  */
+  --animate-pop: pop 0.25s ease-out;
+  --animate-slide-up: slide-up 0.25s ease-out;
+  --animate-slide-down: slide-down 0.25s ease-out;
+  --animate-fade-in: fade-in 0.2s ease-out;
+  --animate-shake: shake 0.4s ease-in-out;
+  --animate-float: float 3s ease-in-out infinite;
+  --animate-celebrate: celebrate 0.8s ease-in-out infinite;
+
+  @keyframes pop {
+    0% { transform: scale(0.8); opacity: 0; }
+    70% { transform: scale(1.05); opacity: 1; }
+    100% { transform: scale(1); }
+  }
+  @keyframes slide-up {
+    from { transform: translateY(100%); }
+    to { transform: translateY(0); }
+  }
+  @keyframes slide-down {
+    from { transform: translateY(-120%); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+  }
+  @keyframes fade-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  @keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    20%, 60% { transform: translateX(-6px); }
+    40%, 80% { transform: translateX(6px); }
+  }
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-6px); }
+  }
+  @keyframes celebrate {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    25% { transform: translateY(-10px) rotate(-6deg); }
+    75% { transform: translateY(-10px) rotate(6deg); }
+  }
+}
+
+body {
+  background: var(--bg);
+  color: var(--ink);
+}
+
+/* Duolingo buttons are never selected as text when tapped quickly */
+button {
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+  cursor: pointer;
+}
+button:disabled {
+  cursor: default;
+}

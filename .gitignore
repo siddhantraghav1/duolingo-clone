@@ -1,0 +1,19 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+.pytest_cache/
+
+# SQLite database (re-created and seeded on startup)
+*.db
+
+# Node / Next.js
+node_modules/
+.next/
+out/
+.env*.local
+
+# Editors / OS
+.vscode/
+.idea/
+.DS_Store

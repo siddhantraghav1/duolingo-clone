@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+  <!-- Browser-tab icon: the mascot's face. Next.js serves app/icon.svg automatically. -->
+  <path d="M60 30 C58 18 50 10 38 10 C40 22 48 30 60 30 Z" fill="#58a700"/>
+  <path d="M60 30 C62 16 72 8 86 10 C82 24 72 30 60 30 Z" fill="#89e219"/>
+  <ellipse cx="60" cy="70" rx="46" ry="44" fill="#58cc02"/>
+  <circle cx="43" cy="62" r="15" fill="#fff"/>
+  <circle cx="77" cy="62" r="15" fill="#fff"/>
+  <circle cx="45" cy="64" r="8" fill="#4b4b4b"/>
+  <circle cx="79" cy="64" r="8" fill="#4b4b4b"/>
+  <path d="M48 86 Q60 98 72 86" stroke="#4b4b4b" stroke-width="5" fill="none" stroke-linecap="round"/>
+</svg>
