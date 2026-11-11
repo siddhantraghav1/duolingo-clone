@@ -333,14 +333,14 @@ All numbers live at the top of `backend/app/game_logic.py`.
 ### Frontend on Vercel
 
 1. **Add New → Project** → import the repository, set **Root Directory** to `frontend`.
-2. Add the environment variable `BACKEND_URL` = your Render URL (e.g. `https://duolingo-clone-api.onrender.com`).
+2. Add the environment variable `BACKEND_URL` = your Render URL (e.g. `https://duolingo-clone-api.onrender.com`), not the Vercel frontend URL. This is required for production builds.
 3. Deploy. Requests to `/api/*` are forwarded to the backend.
 
 ### Environment variables
 
 | Variable           | Where    | Default                           |
 | ------------------ | -------- | --------------------------------- |
-| `BACKEND_URL`      | frontend | `http://localhost:8000`           |
+| `BACKEND_URL`      | frontend | `http://localhost:8000` in development; required in production |
 | `DATABASE_URL`     | backend  | SQLite file `backend/duolingo.db` |
 | `CORS_ORIGINS`     | backend  | `http://localhost:3000`           |
 | `ENABLE_DEV_TOOLS` | backend  | `true`                            |
