@@ -14,7 +14,6 @@ out/
 .env*.local
 
 # Editors / OS
-.vscode/
 .idea/
 .DS_Store
 .claude/

@@ -320,16 +320,14 @@ All numbers live at the top of `backend/app/game_logic.py`.
 
 ---
 
-
-
 ### Environment variables
 
-| Variable           | Where    | Default                           |
-| ------------------ | -------- | --------------------------------- |
+| Variable           | Where    | Default                                                        |
+| ------------------ | -------- | -------------------------------------------------------------- |
 | `BACKEND_URL`      | frontend | `http://localhost:8000` in development; required in production |
-| `DATABASE_URL`     | backend  | SQLite file `backend/duolingo.db` |
-| `CORS_ORIGINS`     | backend  | `http://localhost:3000`           |
-| `ENABLE_DEV_TOOLS` | backend  | `true`                            |
+| `DATABASE_URL`     | backend  | SQLite file `backend/duolingo.db`                              |
+| `CORS_ORIGINS`     | backend  | `http://localhost:3000`                                        |
+| `ENABLE_DEV_TOOLS` | backend  | `true`                                                         |
 
 ---
 
